@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Seguimiento de Proyectos</title>
+    <link rel="stylesheet" href="LobbyAP.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="Imagenes/uanl.png" alt="Logo Izquierda" height="40" class="me-3">
+            <a class="navbar-brand" href="#">Seguimiento de Proyectos</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mis Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Configuración</a></li>
+                </ul>
+            </div>
+            <img src="Imagenes/fime.gif" alt="Logo Derecha" height="40">
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Sistema de Seguimiento de Proyectos</h1>
+        
+        <div class="card mt-4">
+            <div class="card-header">Agregar Nuevo Proyecto</div>
+            <div class="card-body">
+                <form id="form-proyecto">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del Proyecto:</label>
+                        <input type="text" id="nombreProyecto" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Proyecto</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h3>Proyectos</h3>
+            <ul id="listaProyectos" class="list-group"></ul>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTareas" tabindex="-1" aria-labelledby="modalTareasLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTareasLabel">Tareas del Proyecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-tarea">
+                        <div class="mb-3">
+                            <label class="form-label">Nueva Tarea:</label>
+                            <input type="text" id="nombreTarea" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Agregar Tarea</button>
+                    </form>
+                    <ul id="listaTareas" class="list-group mt-3"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="LobbyAP.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
